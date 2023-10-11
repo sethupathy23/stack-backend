@@ -4,10 +4,12 @@ import cors from "cors";
 import * as dotenv from "dotenv";
 dotenv.config();
 // const express = require("express");
+
 const app = express();
-app.use(express.json());
-// const cors = require("cors");
 app.use(cors());
+
+// const cors = require("cors");
+app.use(express.json());
 const PORT = process.env.PORT;
 
 // const MONGO_URL = "mongodb://127.0.0.1";
