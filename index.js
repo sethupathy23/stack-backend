@@ -52,12 +52,12 @@ app.get("/", function (request, response) {
 // ];
 //protection kaga auth middleware
 app.get("/questions", async function (request, response) {
-  //db.questions.find({});
-  // const questions = await client
-  //   .db("B42WD2")
-  //   .collection("Questions")
-  //   .find({})
-  //   .toArray();
+  // db.questions.find({});
+  const questions = await client
+    .db("B42WD2")
+    .collection("Questions")
+    .find({})
+    .toArray();
   response.send(questions);
 });
 
